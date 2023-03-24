@@ -8,7 +8,7 @@ galleryCont.insertAdjacentHTML('beforeend', markupGallery(galleryItems));
 function markupGallery(galleryItems) { 
     return galleryItems.map(({description, original, preview}) => {
         return `
-        <div class="gallery__item">
+        <li class="gallery__item">
             <a class="gallery__link" href="${original}">
                 <img
                     class="gallery__image"
@@ -17,7 +17,7 @@ function markupGallery(galleryItems) {
                     alt="${description}"
                 />
             </a>
-        </div>
+        </li>
         `;
     })
     .join("");
